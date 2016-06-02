@@ -7,16 +7,16 @@ import App from '../modules/App';
 
 jest.unmock('../modules/App');
 
-describe('Boilerplate', () => {
+describe('Node heroku boilerplate', () => {
 
-  it('contains hello text', () => {
+  it('contains my name', () => {
     // This places our component into our test to find off of
     var appRendered = TestUtils.renderIntoDocument(
       <App/>
     )
-    // find h1 on page
+    // find class on page
     var heading = TestUtils.findRenderedDOMComponentWithClass(appRendered, "heading");
     // assert it has text
-    expect(heading.textContent).toEqual("Hello!");
+    expect(heading.textContent).toContain("Paul");
   });
 });

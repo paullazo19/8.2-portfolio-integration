@@ -6,7 +6,7 @@ export default React.createClass({
   render(){
     return (
       <section>
-        <h1>Paul's Portfolio</h1>
+        <h1 className="heading">Paul&rsquo;s Portfolio</h1>
         <nav role="nav">
           <NavLink to="/" onlyActiveOnIndex={true}>Home&nbsp;</NavLink>
           <NavLink to="/blog">Blog&nbsp;</NavLink>
