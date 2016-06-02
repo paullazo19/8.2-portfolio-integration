@@ -25248,8 +25248,8 @@
 	      null,
 	      _react2.default.createElement(
 	        'h1',
-	        null,
-	        'Paul\'s Portfolio'
+	        { className: 'heading' },
+	        'Paul Lazo’s Portfolio'
 	      ),
 	      _react2.default.createElement(
 	        'nav',
@@ -25491,7 +25491,7 @@
 	          'Try out my Etsy clone!'
 	        )
 	      ),
-	      _react2.default.createElement('img', { className: 'image', src: '../assets/etsy.png' })
+	      _react2.default.createElement('img', { className: 'image', src: '/assets/etsy.png' })
 	    );
 	  }
 	});
