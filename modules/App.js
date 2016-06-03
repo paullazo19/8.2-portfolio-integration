@@ -5,15 +5,15 @@ import Home from './Home'
 export default React.createClass({
   render(){
     return (
-      <section>
-        <h1 className="heading">Paul Lazo&rsquo;s Portfolio</h1>
-        <nav role="nav">
-          <NavLink to="/" onlyActiveOnIndex={true}>Home&nbsp;</NavLink>
-          <NavLink to="/blog">Blog&nbsp;</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
+      <div className="wrapper">
+        <h1 className="title">Paul Lazo&rsquo;s Portfolio</h1>
+        <nav role="nav" className="index__nav">
+          <NavLink className="index__nav--link" to="/" onlyActiveOnIndex={true}>Home&nbsp;</NavLink>
+          <NavLink className="index__nav--link" to="/blog">Blog&nbsp;</NavLink>
+          <NavLink className="index__nav--link" to="/projects">Projects</NavLink>
         </nav>
         {this.props.children || <Home/>}
-      </section>
+      </div>
     )
   }
 })

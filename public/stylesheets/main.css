@@ -1,1 +1,131 @@
-/* Main Stylesheet */
+.grid__row {
+  font-size: 0; }
+
+.grid__col--1 {
+  display: inline-block;
+  width: 8.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--2 {
+  display: inline-block;
+  width: 16.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--3 {
+  display: inline-block;
+  width: 25%;
+  font-size: 1.4rem; }
+
+.grid__col--4 {
+  display: inline-block;
+  width: 33.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--5 {
+  display: inline-block;
+  width: 41.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--6 {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.4rem; }
+
+.grid__col--7 {
+  display: inline-block;
+  width: 58.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--8 {
+  display: inline-block;
+  width: 66.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--9 {
+  display: inline-block;
+  width: 75%;
+  font-size: 1.4rem; }
+
+.grid__col--10 {
+  display: inline-block;
+  width: 83.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--11 {
+  display: inline-block;
+  width: 91.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--12 {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.4rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-size: 1.2rem; }
+
+body {
+  font-family: "helvetica", sans-serif; }
+
+.wrapper {
+  background-color: #fafafa;
+  height: 80rem;
+  margin: 0 auto;
+  padding: 5rem;
+  width: 80%; }
+
+.title {
+  color: lightslategray;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase; }
+
+.index__nav {
+  background-color: #697e8d;
+  padding: 0.5rem; }
+
+.index__nav--link {
+  color: white;
+  padding-right: 1rem;
+  text-decoration: none; }
+
+.subhead {
+  color: #f0f0f0;
+  font-size: 5rem;
+  font-weight: 100; }
+
+a {
+  text-decoration: none;
+  color: lightslategray; }
+
+li {
+  list-style: none;
+  padding-bottom: 1rem; }
+
+h3 {
+  padding-bottom: 0.5rem; }
+
+.blog__paragraph {
+  padding-bottom: 1rem;
+  font-size: 1rem; }
+
+.blog__date {
+  color: #c8c8c8;
+  display: inline-block;
+  font-weight: 300;
+  padding-right: 1rem; }
+
+.blog__TTR {
+  color: #697e8d;
+  display: inline-block;
+  font-weight: 300; }
+
+/*# sourceMappingURL=main.css.map */

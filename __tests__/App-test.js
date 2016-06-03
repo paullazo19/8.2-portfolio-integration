@@ -15,7 +15,7 @@ describe('Node heroku boilerplate', () => {
       <App/>
     )
     // find class on page
-    var heading = TestUtils.findRenderedDOMComponentWithClass(appRendered, "heading");
+    var heading = TestUtils.findRenderedDOMComponentWithClass(appRendered, "title");
     // assert it has text
     expect(heading.textContent).toContain("Paul");
   });
