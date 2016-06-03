@@ -6,7 +6,10 @@ npm-debug.log
 *.env
 *.dev
 .DS_Store
+public/javascripts/bundle.js
 
 # Docker
 Dockerfile
 docker-compose.yml
+
+.sass-cache
