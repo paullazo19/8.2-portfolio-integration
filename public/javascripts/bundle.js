@@ -58,13 +58,17 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Blog = __webpack_require__(223);
+	var _Blog = __webpack_require__(224);
 
 	var _Blog2 = _interopRequireDefault(_Blog);
 
-	var _Projects = __webpack_require__(224);
+	var _Projects = __webpack_require__(223);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
+
+	var _Project = __webpack_require__(227);
+
+	var _Project2 = _interopRequireDefault(_Project);
 
 	var _Etsy = __webpack_require__(225);
 
@@ -90,8 +94,7 @@
 	    _react2.default.createElement(
 	      _reactRouter.Route,
 	      { path: '/projects', component: _Projects2.default },
-	      _react2.default.createElement(_reactRouter.Route, { path: '/projects/webcoding/etsy', component: _Etsy2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '/projects/webcoding/todo', component: _Todo2.default })
+	      _react2.default.createElement(_reactRouter.Route, { path: '/projects/project', component: _Project2.default })
 	    ),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/blog', component: _Blog2.default })
 	  )
@@ -25337,7 +25340,7 @@
 	      _react2.default.createElement(
 	        "p",
 	        null,
-	        "I’m a front-end developer in San Antonio, TX with an interest in React JS."
+	        "I’m a front-end developer in San Antonio, TX with an interest in ReactJS."
 	      ),
 	      _react2.default.createElement(
 	        "a",
@@ -25350,6 +25353,64 @@
 
 /***/ },
 /* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Projects',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      projects: [{
+	        title: "Project 1",
+	        projectURL: "http://nfl.com"
+	      }, {
+	        title: "Project 2",
+	        projectURL: "http://dallascowboys.com"
+	      }, {
+	        title: "Project 3",
+	        projectURL: "http://nba.com"
+	      }]
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h2',
+	        { className: 'subhead' },
+	        'Projects'
+	      ),
+	      _react2.default.createElement(
+	        'ul',
+	        null,
+	        this.props.projects.map(function (project, i) {
+	          return _react2.default.createElement(
+	            'li',
+	            { key: i },
+	            project.title
+	          );
+	        }, this)
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25436,64 +25497,6 @@
 	});
 
 /***/ },
-/* 224 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Projects',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      null,
-	      _react2.default.createElement(
-	        'h2',
-	        { className: 'subhead' },
-	        'Projects'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/projects/webcoding/etsy' },
-	            'Etsy'
-	          ),
-	          '– This project is a replication of the search feature on Etsy’s website. '
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/projects/webcoding/todo' },
-	            'Todo'
-	          ),
-	          '– This project is a todo list web app. '
-	        )
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
-
-/***/ },
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -25575,6 +25578,35 @@
 	        )
 	      ),
 	      _react2.default.createElement("img", { className: "image", src: "/assets/todo.png" })
+	    );
+	  }
+	});
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Project',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h2',
+	      null,
+	      'Project highlight'
 	    );
 	  }
 	});
