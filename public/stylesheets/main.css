@@ -102,10 +102,6 @@ body {
   font-size: 5rem;
   font-weight: 100; }
 
-a {
-  text-decoration: none;
-  color: lightslategray; }
-
 li {
   list-style: none;
   padding-bottom: 1rem; }
@@ -127,5 +123,32 @@ h3 {
   color: #697e8d;
   display: inline-block;
   font-weight: 300; }
+
+.project--link {
+  color: lightslategray;
+  display: block;
+  position: relative;
+  text-decoration: none; }
+
+.github {
+  margin-bottom: 1rem;
+  display: inline-block; }
+
+.project--image {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  width: 40%; }
+
+.about--link {
+  color: lightslategray;
+  display: block;
+  margin-top: 1rem;
+  position: relative;
+  text-decoration: none; }
+
+.about--image {
+  width: 30%;
+  margin-bottom: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 import React from 'react'
 import NavLink from './NavLink'
-import Home from './Home'
+import About from './About'
 
 export default React.createClass({
   render(){
@@ -8,11 +8,11 @@ export default React.createClass({
       <div className="wrapper">
         <h1 className="title">Paul Lazo&rsquo;s Portfolio</h1>
         <nav role="nav" className="index__nav">
-          <NavLink className="index__nav--link" to="/" onlyActiveOnIndex={true}>Home&nbsp;</NavLink>
-          <NavLink className="index__nav--link" to="/blog">Blog&nbsp;</NavLink>
-          <NavLink className="index__nav--link" to="/projects">Projects</NavLink>
+          <NavLink className="index__nav--link" to="/" onlyActiveOnIndex={true}>Projects&nbsp;</NavLink>
+          <NavLink className="index__nav--link" to="/about">About&nbsp;</NavLink>
+          <NavLink className="index__nav--link" to="/blog">Blog</NavLink>
         </nav>
-        {this.props.children || <Home/>}
+        {this.props.children || <Projects/>}
       </div>
     )
   }

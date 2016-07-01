@@ -7,12 +7,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "watch-webpack": "webpack --watch",
+    "watch-js": "webpack --watch",
     "watch-sass": "sass --watch sass/main.sass:public/stylesheets/main.css",
-    "watch": "npm run watch-sass & npm run watch-webpack",
-    "test": "jest",
-    "heroku-postbuild": "webpack"
+    "watch": "npm run watch-sass & npm run watch-js",
+    "heroku-postbuild": "webpack",
+    "start": "node index.js",
+    "start-dev": "npm run watch & npm start",
+    "test": "jest"
   },
   "dependencies": {
     "ejs": "2.4.1",

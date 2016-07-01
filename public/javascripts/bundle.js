@@ -58,44 +58,45 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Blog = __webpack_require__(224);
+	var _Blog = __webpack_require__(223);
 
 	var _Blog2 = _interopRequireDefault(_Blog);
 
-	var _Projects = __webpack_require__(223);
+	var _Projects = __webpack_require__(224);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
 
-	var _Project = __webpack_require__(227);
+	var _Project = __webpack_require__(225);
 
 	var _Project2 = _interopRequireDefault(_Project);
 
-	var _Etsy = __webpack_require__(225);
+	var _Etsy = __webpack_require__(226);
 
 	var _Etsy2 = _interopRequireDefault(_Etsy);
 
-	var _Todo = __webpack_require__(226);
+	var _Todo = __webpack_require__(227);
 
 	var _Todo2 = _interopRequireDefault(_Todo);
 
-	var _Home = __webpack_require__(222);
+	var _About = __webpack_require__(222);
 
-	var _Home2 = _interopRequireDefault(_Home);
+	var _About2 = _interopRequireDefault(_About);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
-	  { history: _reactRouter.browserHistory },
+	  { history: _reactRouter.hashHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Projects2.default }),
 	    _react2.default.createElement(
 	      _reactRouter.Route,
 	      { path: '/projects', component: _Projects2.default },
 	      _react2.default.createElement(_reactRouter.Route, { path: '/projects/project', component: _Project2.default })
 	    ),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/blog', component: _Blog2.default })
 	  )
 	), document.getElementById('app'));
@@ -25237,9 +25238,9 @@
 
 	var _NavLink2 = _interopRequireDefault(_NavLink);
 
-	var _Home = __webpack_require__(222);
+	var _About = __webpack_require__(222);
 
-	var _Home2 = _interopRequireDefault(_Home);
+	var _About2 = _interopRequireDefault(_About);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25260,20 +25261,20 @@
 	        _react2.default.createElement(
 	          _NavLink2.default,
 	          { className: 'index__nav--link', to: '/', onlyActiveOnIndex: true },
-	          'Home '
+	          'Projects '
+	        ),
+	        _react2.default.createElement(
+	          _NavLink2.default,
+	          { className: 'index__nav--link', to: '/about' },
+	          'About '
 	        ),
 	        _react2.default.createElement(
 	          _NavLink2.default,
 	          { className: 'index__nav--link', to: '/blog' },
-	          'Blog '
-	        ),
-	        _react2.default.createElement(
-	          _NavLink2.default,
-	          { className: 'index__nav--link', to: '/projects' },
-	          'Projects'
+	          'Blog'
 	        )
 	      ),
-	      this.props.children || _react2.default.createElement(_Home2.default, null)
+	      this.props.children || _react2.default.createElement(Projects, null)
 	    );
 	  }
 	});
@@ -25322,7 +25323,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: "Home",
+	  displayName: "About",
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "main",
@@ -25330,22 +25331,23 @@
 	      _react2.default.createElement(
 	        "h2",
 	        { className: "subhead" },
-	        "Home"
+	        "About"
 	      ),
+	      _react2.default.createElement("img", { className: "about--image", src: "/assets/paul.png" }),
 	      _react2.default.createElement(
 	        "h3",
 	        null,
-	        "My name is Paul"
+	        "Hi, my name is Paul."
 	      ),
 	      _react2.default.createElement(
 	        "p",
-	        null,
-	        "I’m a front-end developer in San Antonio, TX with an interest in ReactJS."
+	        { className: "about--text" },
+	        "I’m a front-end developer in San Antonio, TX with an interest in ReactJS. With degrees in business/marketing and communication design informing my software development, I approach problems from multiple viewpoints to best scope the challenge and create a solution."
 	      ),
 	      _react2.default.createElement(
 	        "a",
-	        { href: "https://github.com/paullazo19" },
-	        "Checkout my github profile"
+	        { className: "about--link", href: "https://github.com/paullazo19" },
+	        "Check out my github profile."
 	      )
 	    );
 	  }
@@ -25353,64 +25355,6 @@
 
 /***/ },
 /* 223 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Projects',
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      projects: [{
-	        title: "Project 1",
-	        projectURL: "http://nfl.com"
-	      }, {
-	        title: "Project 2",
-	        projectURL: "http://dallascowboys.com"
-	      }, {
-	        title: "Project 3",
-	        projectURL: "http://nba.com"
-	      }]
-	    };
-	  },
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      null,
-	      _react2.default.createElement(
-	        'h2',
-	        { className: 'subhead' },
-	        'Projects'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        this.props.projects.map(function (project, i) {
-	          return _react2.default.createElement(
-	            'li',
-	            { key: i },
-	            project.title
-	          );
-	        }, this)
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25497,7 +25441,124 @@
 	});
 
 /***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Projects',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      projects: [{
+	        title: "The Find Project",
+	        projectURL: "thefindproject.herokuapp.com",
+	        image: "TFP-logo-reverse.png"
+	      }, {
+	        title: "Etsy clone",
+	        projectURL: "paullazo19-etsy-clone.surge.sh",
+	        image: "etsy.png"
+	      }, {
+	        title: "Todo list",
+	        projectURL: "paul_lazo_todo.surge.sh",
+	        image: "todo.png"
+	      }, {
+	        title: "Facebook newsfeed",
+	        projectURL: "facebook_newsfeed.surge.sh",
+	        image: "facebook_lowres.png"
+	      }, {
+	        title: "Cowboys contact app",
+	        projectURL: "cowboys-contact-list.surge.sh",
+	        image: "cowboys.png"
+	      }, {
+	        title: "T-shirt views using Bootstrap",
+	        projectURL: "paullazo19-tshirt-views.surge.sh",
+	        image: "t-shirt.png"
+	      }, {
+	        title: "Photo album",
+	        projectURL: "paullazo19-2photo2album.surge.sh",
+	        image: "vulture_lowres.png"
+	      }]
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h2',
+	        { className: 'subhead' },
+	        'Projects'
+	      ),
+	      _react2.default.createElement(
+	        'nav',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'For more work, check out my ',
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'project--link github', href: 'https://github.com/paullazo19' },
+	            'github profile.'
+	          )
+	        ),
+	        this.props.projects.map(function (project, i) {
+	          return _react2.default.createElement(
+	            'a',
+	            { className: 'project--link', href: 'http://' + project.projectURL, key: i },
+	            project.title,
+	            _react2.default.createElement('img', { className: 'project--image', src: '/assets/' + project.image })
+	          );
+	        }, this)
+	      )
+	    );
+	  }
+	});
+
+/***/ },
 /* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Project',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h2',
+	      null,
+	      'Project highlight'
+	    );
+	  }
+	});
+
+/***/ },
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25541,7 +25602,7 @@
 	});
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25578,35 +25639,6 @@
 	        )
 	      ),
 	      _react2.default.createElement("img", { className: "image", src: "/assets/todo.png" })
-	    );
-	  }
-	});
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Project',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'h2',
-	      null,
-	      'Project highlight'
 	    );
 	  }
 	});
