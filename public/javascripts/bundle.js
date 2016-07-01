@@ -66,18 +66,6 @@
 
 	var _Projects2 = _interopRequireDefault(_Projects);
 
-	var _Project = __webpack_require__(225);
-
-	var _Project2 = _interopRequireDefault(_Project);
-
-	var _Etsy = __webpack_require__(226);
-
-	var _Etsy2 = _interopRequireDefault(_Etsy);
-
-	var _Todo = __webpack_require__(227);
-
-	var _Todo2 = _interopRequireDefault(_Todo);
-
 	var _About = __webpack_require__(222);
 
 	var _About2 = _interopRequireDefault(_About);
@@ -91,11 +79,7 @@
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Projects2.default }),
-	    _react2.default.createElement(
-	      _reactRouter.Route,
-	      { path: '/projects', component: _Projects2.default },
-	      _react2.default.createElement(_reactRouter.Route, { path: '/projects/project', component: _Project2.default })
-	    ),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/projects', component: _Projects2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/blog', component: _Blog2.default })
 	  )
@@ -25524,121 +25508,6 @@
 	          );
 	        }, this)
 	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 225 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Project',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'h2',
-	      null,
-	      'Project highlight'
-	    );
-	  }
-	});
-
-/***/ },
-/* 226 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Etsy',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      null,
-	      this.props.params.Etsy,
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Etsy Project'
-	        ),
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'http://paullazo19-etsy-clone.surge.sh/' },
-	          'Try out my Etsy clone!'
-	        )
-	      ),
-	      _react2.default.createElement('img', { className: 'image', src: '/assets/etsy.png' })
-	    );
-	  }
-	});
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: "Todo",
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "section",
-	      null,
-	      this.props.params.Todo,
-	      _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "h1",
-	          null,
-	          "Todo Project"
-	        ),
-	        _react2.default.createElement(
-	          "a",
-	          { href: "http://paul_lazo_todo.surge.sh/" },
-	          "Try out my Todo app!"
-	        )
-	      ),
-	      _react2.default.createElement("img", { className: "image", src: "/assets/todo.png" })
 	    );
 	  }
 	});
