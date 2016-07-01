@@ -6,17 +6,40 @@ export default React.createClass({
     return {
       projects: [
         {
-          title: "Project 1",
-          projectURL: "http://nfl.com"
+          title: "The Find Project",
+          projectURL: "thefindproject.herokuapp.com",
+          image: "TFP-logo-reverse.png"
         },
         {
-          title: "Project 2",
-          projectURL: "http://dallascowboys.com"
+          title: "Etsy clone",
+          projectURL: "paullazo19-etsy-clone.surge.sh",
+          image: "etsy.png"
         },
         {
-          title: "Project 3",
-          projectURL: "http://nba.com"
+          title: "Todo list",
+          projectURL: "paul_lazo_todo.surge.sh",
+          image: "todo.png"
         },
+        {
+          title: "Facebook newsfeed",
+          projectURL: "facebook_newsfeed.surge.sh",
+          image: "facebook_lowres.png"
+        },
+        {
+          title: "Cowboys contact app",
+          projectURL: "cowboys-contact-list.surge.sh",
+          image: "cowboys.png"
+        },
+        {
+          title: "T-shirt views using Bootstrap",
+          projectURL: "paullazo19-tshirt-views.surge.sh",
+          image: "t-shirt.png"
+        },
+        {
+          title: "Photo album",
+          projectURL: "paullazo19-2photo2album.surge.sh",
+          image: "vulture_lowres.png"
+        }
       ]
     }
   },
@@ -24,12 +47,13 @@ export default React.createClass({
     return(
       <section>
       <h2 className="subhead">Projects</h2>
-       <ul>
+       <nav>
+         <p>For more work, check out my <a className="project--link github" href="https://github.com/paullazo19">github profile.</a></p>
        {this.props.projects.map(function(project, i){
-         return <li key={i}>{project.title}</li>
+         return <a className="project--link" href={`http://${project.projectURL}`} key={i}>{project.title}<img className="project--image" src={`/assets/${project.image}`}/></a>
        }, this)
      }
-       </ul>
+       </nav>
       </section>
     )
   }
