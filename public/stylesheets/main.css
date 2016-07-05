@@ -75,32 +75,8 @@ body {
 
 .wrapper {
   background-color: #fafafa;
-  height: 80rem;
   margin: 0 auto;
-  padding: 5rem;
-  width: 80%; }
-
-.title {
-  color: lightslategray;
-  font-size: 1rem;
-  font-weight: 100;
-  letter-spacing: 0.5rem;
-  padding-bottom: 1rem;
-  text-transform: uppercase; }
-
-.index__nav {
-  background-color: #697e8d;
-  padding: 0.5rem; }
-
-.index__nav--link {
-  color: white;
-  padding-right: 1rem;
-  text-decoration: none; }
-
-.subhead {
-  color: #f0f0f0;
-  font-size: 5rem;
-  font-weight: 100; }
+  padding: 5rem; }
 
 li {
   list-style: none;
@@ -109,26 +85,16 @@ li {
 h3 {
   padding-bottom: 0.5rem; }
 
-.blog__paragraph {
-  padding-bottom: 1rem;
-  font-size: 1rem; }
-
-.blog__date {
-  color: #c8c8c8;
-  display: inline-block;
-  font-weight: 300;
-  padding-right: 1rem; }
-
-.blog__TTR {
-  color: #697e8d;
-  display: inline-block;
-  font-weight: 300; }
-
 .project--link {
   color: lightslategray;
-  display: block;
+  display: inline-block;
   position: relative;
   text-decoration: none; }
+
+.projects--text {
+  font-size: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem; }
 
 .github {
   margin-bottom: 1rem;
@@ -138,7 +104,51 @@ h3 {
   display: block;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  width: 40%; }
+  margin: 0 auto; }
+
+.subhead {
+  color: #f0f0f0;
+  font-size: 5rem;
+  font-weight: 100;
+  padding-top: 4rem;
+  padding-bottom: 1rem; }
+
+.title {
+  color: lightslategray;
+  font-size: 1.25rem;
+  font-weight: 100;
+  letter-spacing: 0.75rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.apostrophe {
+  letter-spacing: 0.5rem; }
+
+.index__nav--link {
+  background-color: #697e8d;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  width: 33.333%; }
+
+.index__nav--link:first-child {
+  position: absolute;
+  left: 0; }
+
+.index__nav--link:nth-child(2) {
+  position: absolute;
+  left: 33.333%; }
+
+.index__nav--link:last-child {
+  position: absolute;
+  right: 0; }
+
+.index__nav--link:hover {
+  background-color: #7d92a1; }
 
 .about--link {
   color: lightslategray;
@@ -148,7 +158,52 @@ h3 {
   text-decoration: none; }
 
 .about--image {
-  width: 30%;
-  margin-bottom: 1rem; }
+  border-radius: 1rem;
+  float: right;
+  margin-bottom: 1rem;
+  width: 30%; }
+
+.group--text {
+  display: inline-block;
+  font-size: 1.75rem; }
+
+.blog__paragraph {
+  padding-bottom: 1rem;
+  font-size: 1.5rem; }
+
+.blog__date {
+  color: #c8c8c8;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1rem;
+  padding-right: 1rem; }
+
+.blog__TTR {
+  color: #697e8d;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1rem; }
+
+.hideContent {
+  overflow: hidden;
+  line-height: 1.5rem;
+  height: 4.5rem; }
+
+.showContent {
+  line-height: 1.5rem;
+  height: auto; }
+
+.blog--showMore {
+  background-color: #697e8d;
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-top: 1rem; }
+
+.blog--entry {
+  padding-bottom: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
