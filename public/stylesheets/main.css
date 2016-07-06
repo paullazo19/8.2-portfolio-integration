@@ -73,11 +73,6 @@ html {
 body {
   font-family: "helvetica", sans-serif; }
 
-.wrapper {
-  background-color: #fafafa;
-  margin: 0 auto;
-  padding: 5rem; }
-
 li {
   list-style: none;
   padding-bottom: 1rem; }
@@ -88,11 +83,12 @@ h3 {
 .project--link {
   color: lightslategray;
   display: inline-block;
+  font-size: 1.75rem;
   position: relative;
   text-decoration: none; }
 
 .projects--text {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem; }
 
@@ -104,7 +100,8 @@ h3 {
   display: block;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .subhead {
   color: #f0f0f0;
@@ -112,6 +109,26 @@ h3 {
   font-weight: 100;
   padding-top: 4rem;
   padding-bottom: 1rem; }
+
+@media (min-width: 768px) {
+  .project--link {
+    padding: 1rem;
+    width: 50%; }
+
+  .project--image {
+    width: 100%; } }
+@media only screen and (max-device-width: 1024px) {
+  .project--link {
+    padding: 1rem;
+    width: 100%; }
+
+  .project--image {
+    width: 100%; } }
+.wrapper {
+  background-color: #fafafa;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%; }
 
 .title {
   color: lightslategray;
@@ -121,9 +138,6 @@ h3 {
   padding-bottom: 1rem;
   text-align: center;
   text-transform: uppercase; }
-
-.apostrophe {
-  letter-spacing: 0.5rem; }
 
 .index__nav--link {
   background-color: #697e8d;
@@ -150,10 +164,19 @@ h3 {
 .index__nav--link:hover {
   background-color: #7d92a1; }
 
+@media (min-width: 768px) {
+  .wrapper {
+    background-color: #fafafa;
+    width: 80%;
+    margin: 0 auto; } }
+@media only screen and (max-device-width: 1024px) {
+  .wrapper {
+    width: 100%; } }
 .about--link {
   color: lightslategray;
   display: block;
-  margin-top: 1rem;
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
   position: relative;
   text-decoration: none; }
 
@@ -163,34 +186,51 @@ h3 {
   margin-bottom: 1rem;
   width: 30%; }
 
+.about__image--container {
+  padding-left: 2rem; }
+
 .group--text {
   display: inline-block;
   font-size: 1.75rem; }
 
+.about--text {
+  font-size: 1.75rem;
+  padding-bottom: 1rem; }
+
+.about--firstline {
+  font-size: 1.75rem; }
+
+.about--email {
+  padding-top: 1rem;
+  font-size: 1.75rem; }
+
+.blog__heading {
+  font-size: 2rem; }
+
 .blog__paragraph {
   padding-bottom: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 .blog__date {
   color: #c8c8c8;
   display: inline-block;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding-right: 1rem; }
 
 .blog__TTR {
   color: #697e8d;
   display: inline-block;
   font-weight: 300;
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 .hideContent {
   overflow: hidden;
-  line-height: 1.5rem;
-  height: 4.5rem; }
+  line-height: 1.75rem;
+  height: 5.25rem; }
 
 .showContent {
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   height: auto; }
 
 .blog--showMore {

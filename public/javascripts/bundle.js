@@ -25237,13 +25237,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        { className: 'title' },
-	        'Paul Laz',
-	        _react2.default.createElement(
-	          'span',
-	          { className: 'apostrophe' },
-	          'o’'
-	        ),
-	        's Portfolio'
+	        'Paul Lazo’s Portfolio'
 	      ),
 	      _react2.default.createElement(
 	        'nav',
@@ -25323,27 +25317,35 @@
 	        { className: "subhead" },
 	        "About"
 	      ),
-	      _react2.default.createElement("img", { className: "about--image", src: "/assets/paul.png" }),
+	      _react2.default.createElement(
+	        "div",
+	        { className: "about__image--container" },
+	        _react2.default.createElement("img", { className: "about--image", src: "/assets/paul.png" })
+	      ),
 	      _react2.default.createElement(
 	        "h3",
-	        null,
+	        { className: "about--firstline" },
 	        "Hi, my name is Paul."
 	      ),
 	      _react2.default.createElement(
 	        "p",
 	        { className: "about--text" },
-	        "I’m a front-end developer in ",
-	        _react2.default.createElement(
-	          "span",
-	          { className: "group--text" },
-	          "San Antonio, TX"
-	        ),
-	        " with an interest in ReactJS. With degrees in business/marketing and communication design informing my software development, I approach problems from multiple viewpoints to best scope the challenge and create a solution."
+	        "I’m a software developer in San Antonio, TX with a specialization in ReactJS. With degrees in business/marketing and communication design informing my coding, I approach problems from multiple viewpoints to best scope the challenge and create a solution."
 	      ),
 	      _react2.default.createElement(
 	        "a",
 	        { className: "about--link", href: "https://github.com/paullazo19" },
 	        "Check out my github profile."
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        { className: "about--email" },
+	        "Send a message to me at ",
+	        _react2.default.createElement(
+	          "a",
+	          { className: "about--link", href: "mailto:paullazo19@gmail.com" },
+	          "paullazo19@gmail.com"
+	        )
 	      )
 	    );
 	  }
@@ -25531,7 +25533,7 @@
 	exports.default = [{
 	  title: "The Find Project",
 	  projectURL: "thefindproject.herokuapp.com",
-	  image: "TFP-logo-reverse.png"
+	  image: "TFP_image.png"
 	}, {
 	  title: "Etsy clone",
 	  projectURL: "paullazo19-etsy-clone.surge.sh",

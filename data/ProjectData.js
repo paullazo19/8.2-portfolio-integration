@@ -2,7 +2,7 @@ export default [
     {
       title: "The Find Project",
       projectURL: "thefindproject.herokuapp.com",
-      image: "TFP-logo-reverse.png"
+      image: "TFP_image.png"
     },
     {
       title: "Etsy clone",
