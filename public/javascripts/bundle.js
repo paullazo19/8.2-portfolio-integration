@@ -62,7 +62,7 @@
 
 	var _Blog2 = _interopRequireDefault(_Blog);
 
-	var _Projects = __webpack_require__(224);
+	var _Projects = __webpack_require__(226);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
 
@@ -25369,11 +25369,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _BlogData = __webpack_require__(226);
+	var _BlogData = __webpack_require__(224);
 
 	var _BlogData2 = _interopRequireDefault(_BlogData);
 
-	var _jquery = __webpack_require__(227);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -25459,109 +25459,6 @@
 
 /***/ },
 /* 224 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	var _ProjectData = __webpack_require__(225);
-
-	var _ProjectData2 = _interopRequireDefault(_ProjectData);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Projects',
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      projects: _ProjectData2.default
-	    };
-	  },
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      null,
-	      _react2.default.createElement(
-	        'h2',
-	        { className: 'subhead' },
-	        'Projects'
-	      ),
-	      _react2.default.createElement(
-	        'nav',
-	        null,
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'projects--text' },
-	          'For more work, check out my ',
-	          _react2.default.createElement(
-	            'a',
-	            { className: 'project--link github', href: 'https://github.com/paullazo19' },
-	            'github profile.'
-	          )
-	        ),
-	        this.props.projects.map(function (project, i) {
-	          return _react2.default.createElement(
-	            'a',
-	            { className: 'grid__col--12 project--link', href: 'http://' + project.projectURL, key: i },
-	            project.title,
-	            _react2.default.createElement('img', { className: 'project--image', src: '/assets/' + project.image })
-	          );
-	        }, this)
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 225 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = [{
-	  title: "The Find Project",
-	  projectURL: "thefindproject.herokuapp.com",
-	  image: "TFP_image.png"
-	}, {
-	  title: "Etsy clone",
-	  projectURL: "paullazo19-etsy-clone.surge.sh",
-	  image: "etsy.png"
-	}, {
-	  title: "Todo list",
-	  projectURL: "paul_lazo_todo.surge.sh",
-	  image: "todo.png"
-	}, {
-	  title: "Facebook newsfeed",
-	  projectURL: "facebook_newsfeed.surge.sh",
-	  image: "facebook_lowres.png"
-	}, {
-	  title: "Cowboys contact app",
-	  projectURL: "cowboys-contact-list.surge.sh",
-	  image: "cowboys.png"
-	}, {
-	  title: "T-shirt views using Bootstrap",
-	  projectURL: "paullazo19-tshirt-views.surge.sh",
-	  image: "t-shirt.png"
-	}, {
-	  title: "Photo album",
-	  projectURL: "paullazo19-2photo2album.surge.sh",
-	  image: "vulture_lowres.png"
-	}];
-
-/***/ },
-/* 226 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25574,6 +25471,11 @@
 	  date: "May 31st, 2016",
 	  paragraph1: "What are some of the 'gotchas' for writing efficient CSS? Use unique class names for elements. Use variables for colors and border styling. Use mixins for repeating code. Describe pseudo-elements and discuss what they are used for. Pseudo-elements are different states of an element, added as suffixes, identified to style the element, also adding more information to the user. An example is ':after' which places content after a defined element or ':hover' which styles an element when a user hovers the cursor over the element.",
 	  paragraph2: "The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)? How can you use this system to your advantage? Priority is determined by inheritance. A child element will inherit certain styling from their parent element, such as margin or font-size. This can be used to my advantage by selecting multiple elements at once with an encompassing selector like '*' or 'body' if I know I want a consistent style on all the contained elements. Even if one element needs to be changed in the group, I'd only have to apply a new style to that one element. What's the difference between inline and inline-block? An element with a display property of inline means that the element cannot accept a width or height as a property. Only the content in the element will add to the width and height. With inline-block, the element acts like a block, with the ability to be on the same line as other elements but also take a defined height and width."
+	}, {
+	  heading: "My second meetup of the summer!",
+	  date: "May 18th, 2016",
+	  paragraph1: "I attended a meetup on May 18 at the Geekdom Event Center hosted by Hill Country Javascript. The topic was continuous integration automation testing. Continuous integration is the practice of frequently deploying a revised code version every time edits are made. During the process of merging git commits to the master code of a product, continuous integration will automatically run the tests provided in the code to act as a checkpoint before the revisions are merged to the master code and ultimately deployed to the web. The variety of tests written for the continuous integration process was a focal point of the talk by Micah Godbolt. He defined five test types that he uses: performance, visual, function, behavioral, and qualitative.",
+	  paragraph2: "Behavioral testing does what it’s name suggests: tests how the website behaves. If a user shopping online clicks on a “plus one item” icon in the quantity section, the number of items in the user’s shopping cart should be one. Performance testing ensures that the website is loading fast enough, for instance, so, if a particular page is loading slower than expected, the test will fail. The developer can then inspect the code to identify if there are any overly large files such as photos which are lengthening the load time. Visual testing includes monitoring the visual presentation of a website at multiple screen sizes. In a visual test, multiple screen sizes can be defined as well as the content which should be present at that screen size. Function testing tests functions. The speaker at the meetup used a shipping scenario to employ a functional test. The function he created calculated the amount of shipping costs based on the number of units to be shipped, and he passed to variables for the shipping function to expect a certain cost. Qualitative testing ensures the quality of your product across multiple browsers. Using linting tools such as Sassling, JS lint, and JSON lint, a developer can scan their code with a program to find inconsistencies and errors."
 	}, {
 	  heading: "Test-driven Development",
 	  date: "May 18th, 2016",
@@ -25592,7 +25494,7 @@
 	}];
 
 /***/ },
-/* 227 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -35410,6 +35312,109 @@
 	return jQuery;
 	}));
 
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _ProjectData = __webpack_require__(227);
+
+	var _ProjectData2 = _interopRequireDefault(_ProjectData);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Projects',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      projects: _ProjectData2.default
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'section',
+	      null,
+	      _react2.default.createElement(
+	        'h2',
+	        { className: 'subhead' },
+	        'Projects'
+	      ),
+	      _react2.default.createElement(
+	        'nav',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'projects--text' },
+	          'For more work, check out my ',
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'project--link github', href: 'https://github.com/paullazo19' },
+	            'github profile.'
+	          )
+	        ),
+	        this.props.projects.map(function (project, i) {
+	          return _react2.default.createElement(
+	            'a',
+	            { className: 'grid__col--12 project--link', href: 'http://' + project.projectURL, key: i },
+	            project.title,
+	            _react2.default.createElement('img', { className: 'project--image', src: '/assets/' + project.image })
+	          );
+	        }, this)
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 227 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = [{
+	  title: "The Find Project",
+	  projectURL: "thefindproject.herokuapp.com",
+	  image: "TFP_image.png"
+	}, {
+	  title: "Etsy clone",
+	  projectURL: "paullazo19-etsy-clone.surge.sh",
+	  image: "etsy.png"
+	}, {
+	  title: "Todo list",
+	  projectURL: "paul_lazo_todo.surge.sh",
+	  image: "todo.png"
+	}, {
+	  title: "Facebook newsfeed",
+	  projectURL: "facebook_newsfeed.surge.sh",
+	  image: "facebook_lowres.png"
+	}, {
+	  title: "Cowboys contact app",
+	  projectURL: "cowboys-contact-list.surge.sh",
+	  image: "cowboys.png"
+	}, {
+	  title: "T-shirt views using Bootstrap",
+	  projectURL: "paullazo19-tshirt-views.surge.sh",
+	  image: "t-shirt.png"
+	}, {
+	  title: "Photo album",
+	  projectURL: "paullazo19-2photo2album.surge.sh",
+	  image: "vulture_lowres.png"
+	}];
 
 /***/ }
 /******/ ]);
