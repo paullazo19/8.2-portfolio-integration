@@ -1,46 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router'
+import ProjectData from '../data/ProjectData'
 
 export default React.createClass({
   getDefaultProps(){
     return {
-      projects: [
-        {
-          title: "The Find Project",
-          projectURL: "thefindproject.herokuapp.com",
-          image: "TFP-logo-reverse.png"
-        },
-        {
-          title: "Etsy clone",
-          projectURL: "paullazo19-etsy-clone.surge.sh",
-          image: "etsy.png"
-        },
-        {
-          title: "Todo list",
-          projectURL: "paul_lazo_todo.surge.sh",
-          image: "todo.png"
-        },
-        {
-          title: "Facebook newsfeed",
-          projectURL: "facebook_newsfeed.surge.sh",
-          image: "facebook_lowres.png"
-        },
-        {
-          title: "Cowboys contact app",
-          projectURL: "cowboys-contact-list.surge.sh",
-          image: "cowboys.png"
-        },
-        {
-          title: "T-shirt views using Bootstrap",
-          projectURL: "paullazo19-tshirt-views.surge.sh",
-          image: "t-shirt.png"
-        },
-        {
-          title: "Photo album",
-          projectURL: "paullazo19-2photo2album.surge.sh",
-          image: "vulture_lowres.png"
-        }
-      ]
+      projects: ProjectData
     }
   },
   render(){
@@ -48,9 +13,9 @@ export default React.createClass({
       <section>
       <h2 className="subhead">Projects</h2>
        <nav>
-         <p>For more work, check out my <a className="project--link github" href="https://github.com/paullazo19">github profile.</a></p>
+         <p className="projects--text">For more work, check out my <a className="project--link github" href="https://github.com/paullazo19">github profile.</a></p>
        {this.props.projects.map(function(project, i){
-         return <a className="project--link" href={`http://${project.projectURL}`} key={i}>{project.title}<img className="project--image" src={`/assets/${project.image}`}/></a>
+         return <a className="grid__col--12 project--link" href={`http://${project.projectURL}`} key={i}>{project.title}<img className="project--image" src={`/assets/${project.image}`}/></a>
        }, this)
      }
        </nav>
