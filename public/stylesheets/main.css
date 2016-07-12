@@ -68,10 +68,12 @@
 
 html {
   font-size: 62.5%;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  height: 100%; }
 
 body {
-  font-family: "helvetica", sans-serif; }
+  font-family: "helvetica", sans-serif;
+  height: 100%; }
 
 li {
   list-style: none;
@@ -84,27 +86,30 @@ h3 {
   color: lightslategray;
   display: inline-block;
   font-size: 1.75rem;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
   position: relative;
   text-decoration: none; }
 
 .projects--text {
   font-size: 1.75rem;
   padding-top: 1rem;
-  padding-bottom: 0.5rem; }
+  padding-bottom: 1rem; }
 
 .github {
   margin-bottom: 1rem;
-  display: inline-block; }
+  display: inline; }
 
 .project--image {
+  border: 1px solid #c8c8c8;
   display: block;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   margin: 0 auto;
   width: 100%; }
 
 .subhead {
-  color: #f0f0f0;
+  color: #e6e6e6;
   font-size: 5rem;
   font-weight: 100;
   padding-top: 4rem;
@@ -112,7 +117,6 @@ h3 {
 
 @media (min-width: 768px) {
   .project--link {
-    padding: 1rem;
     width: 50%; }
 
   .projects--text .github {
@@ -122,13 +126,14 @@ h3 {
     width: 100%; } }
 @media only screen and (max-device-width: 1024px) {
   .project--link {
-    padding: 1rem;
+    padding-right: 0rem;
     width: 100%; }
 
   .project--image {
     width: 100%; } }
 .wrapper {
-  background-color: #fafafa;
+  background-color: whitesmoke;
+  min-height: 50rem;
   margin: 0 auto;
   padding: 2rem;
   width: 100%; }
@@ -169,50 +174,58 @@ h3 {
 
 @media (min-width: 768px) {
   .wrapper {
-    background-color: #fafafa;
+    background-color: whitesmoke;
     width: 80%;
     margin: 0 auto; } }
 @media only screen and (max-device-width: 1024px) {
   .wrapper {
+    background-color: whitesmoke;
+    min-height: 85rem;
     width: 100%; } }
 .about--link {
   color: lightslategray;
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   padding-bottom: 1rem;
   position: relative;
   text-decoration: none; }
 
 .about--image {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   float: right;
   margin-bottom: 1rem;
-  width: 30%; }
+  width: 20%; }
 
 .about__image--container {
-  padding-left: 2rem; }
+  background-color: red;
+  padding-left: 3rem; }
 
 .group--text {
   display: inline-block;
-  font-size: 1.75rem; }
+  font-size: 1.25rem; }
 
 .about--text {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   padding-bottom: 1rem; }
 
 .about--firstline {
   font-size: 1.75rem; }
 
 .about--email {
-  padding-top: 1rem;
-  font-size: 1.75rem; }
+  font-size: 1.25rem; }
 
+@media only screen and (max-device-width: 1024px) {
+  .about--image {
+    width: 30%; }
+
+  .about__image--container {
+    padding-left: 1rem; } }
 .blog__heading {
   font-size: 2rem; }
 
 .blog__paragraph {
   padding-bottom: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 .blog__date {
   color: #c8c8c8;
@@ -237,6 +250,18 @@ h3 {
   height: auto; }
 
 .blog--showMore {
+  -webkit-appearance: 0;
+  -moz-appearance: 0;
+  -ms-appearance: 0;
+  appearance: 0;
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -ms-outline: 0;
+  outline: 0;
+  -webkit-border: 0;
+  -moz-border: 0;
+  -ms-border: 0;
+  border: 0;
   background-color: #697e8d;
   border-radius: 0.75rem;
   color: white;

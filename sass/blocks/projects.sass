@@ -4,27 +4,30 @@
   color: rgb(119, 136, 153)
   display: inline-block
   font-size: 1.75rem
+  padding-bottom: 2rem
+  padding-right: 1.5rem
   position: relative
   text-decoration: none
 
 .projects--text
   font-size: 1.75rem
   padding-top: 1rem
-  padding-bottom: 0.5rem
+  padding-bottom: 1rem
 
 .github
   margin-bottom: 1rem
-  display: inline-block
+  display: inline
 
 .project--image
+  border: $borderStandard
   display: block
-  padding-top: 1rem
-  padding-bottom: 2rem
+  margin-top: 1rem
+  margin-bottom: 2rem
   margin: 0 auto
   width: 100%
 
 .subhead
-  color: rgb(240, 240, 240)
+  color: rgb(230, 230, 230)
   font-size: 5rem
   font-weight: 100
   padding-top: 4rem
@@ -37,7 +40,7 @@
 
 @media (min-width: 768px)
   .project--link
-    padding: 1rem
+    // padding: 1rem
     width: 50%
 
   .projects--text .github
@@ -46,10 +49,10 @@
   .project--image
     width: 100%
 
-// device breakpoints
+// smart device breakpoints
 @media only screen and (max-device-width: 1024px)
   .project--link
-    padding: 1rem
+    padding-right: 0rem
     width: 100%
 
   .project--image
