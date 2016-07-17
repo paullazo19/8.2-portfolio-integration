@@ -121,7 +121,7 @@ h3 {
   padding-bottom: 1rem; }
 
 .project--info {
-  background-color: rgba(25, 25, 112, 0.75);
+  background-color: rgba(25, 25, 112, 0.9);
   top: 0;
   right: 0;
   bottom: 0;
@@ -164,7 +164,18 @@ h3 {
   .project--info:hover {
     opacity: 0; }
 
-  .project--info:touchstart {
+  .project--info {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 2rem;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
     opacity: 100; } }
 .wrapper {
   background-color: whitesmoke;

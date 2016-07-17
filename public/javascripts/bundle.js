@@ -35404,7 +35404,7 @@
 	  title: "Credit card validation",
 	  projectURL: "paullazo19_cc_validation.surge.sh",
 	  image: "cc.png",
-	  info: "This student work is an exercise in input validation."
+	  info: "This student work is an exercise in form validation."
 	}, {
 	  title: "Etsy clone",
 	  projectURL: "paullazo19-etsy-clone.surge.sh",
