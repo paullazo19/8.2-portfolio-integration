@@ -12,13 +12,13 @@ export default React.createClass({
     return(
       <section>
       <h2 className="subhead">Projects</h2>
-       <nav>
+       <ul>
          <p className="projects--text">For more work, check out my <a className="project--link github" href="https://github.com/paullazo19">github profile.</a></p>
        {this.props.projects.map(function(project, i){
-         return <a className="grid__col--12 project--link" href={`http://${project.projectURL}`} key={i}>{project.title}<img className="project--image" src={`/assets/${project.image}`}/></a>
+         return <a className="grid__col--12 project--link" href={`http://${project.projectURL}`} key={i}>{project.title}<li className="project__image--container"><span className="project--info">{project.info}</span><img className="project--image" src={`/assets/${project.image}`}/></li></a>
        }, this)
      }
-       </nav>
+       </ul>
       </section>
     )
   }

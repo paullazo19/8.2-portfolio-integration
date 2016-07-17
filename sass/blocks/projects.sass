@@ -18,12 +18,17 @@
   margin-bottom: 1rem
   display: inline
 
-.project--image
+.project__image--container
   border: $borderStandard
-  display: block
-  margin-top: 1rem
-  margin-bottom: 2rem
+  display: inline-block
+  height: 26rem
   margin: 0 auto
+  padding-bottom: 2rem
+  position: relative
+  overflow: hidden
+  width: 100%
+
+.project--image
   width: 100%
 
 .subhead
@@ -33,6 +38,27 @@
   padding-top: 4rem
   padding-bottom: 1rem
 
+.project--info
+  background-color: rgba(25, 25, 112, 0.75)
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  color: white
+  font-size: 1.25rem
+  font-weight: 100
+  padding: 1rem
+  padding-top: 20%
+  position: absolute
+  width: 100%
+  opacity: 0
+  transition: opacity .25s ease-in-out
+  -moz-transition: opacity .25s ease-in-out
+  -webkit-transition: opacity .25s ease-in-out
+
+.project--info:hover
+  opacity: 100
+
 // web breakpoints
 @media (max-width: 479px)
 
@@ -40,14 +66,17 @@
 
 @media (min-width: 768px)
   .project--link
-    // padding: 1rem
     width: 50%
 
   .projects--text .github
     padding: 0rem
 
-  .project--image
-    width: 100%
+  .project__image--container
+    height: 10rem
+
+@media (min-width: 1024px)
+  .project__image--container
+    height: 14rem
 
 // smart device breakpoints
 @media only screen and (max-device-width: 1024px)
@@ -55,5 +84,11 @@
     padding-right: 0rem
     width: 100%
 
-  .project--image
-    width: 100%
+  .project__image--container
+    height: 26rem
+
+  .project--info:hover
+    opacity: 0
+
+  .project--info:touchstart
+    opacity: 100
