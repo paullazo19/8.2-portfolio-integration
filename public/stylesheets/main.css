@@ -121,7 +121,7 @@ h3 {
   padding-bottom: 1rem; }
 
 .project--info {
-  background-color: rgba(25, 25, 112, 0.9);
+  background-color: rgba(100, 125, 150, 0.9);
   top: 0;
   right: 0;
   bottom: 0;
@@ -153,7 +153,7 @@ h3 {
 @media (min-width: 1024px) {
   .project__image--container {
     height: 14rem; } }
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 767px) {
   .project--link {
     padding-right: 0rem;
     width: 100%; }
@@ -173,6 +173,26 @@ h3 {
     font-size: 1.5rem;
     font-weight: 100;
     line-height: 2rem;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    opacity: 100; } }
+@media only screen and (min-device-width: 767px) {
+  .project--link {
+    width: 50%; }
+
+  .project--info:hover {
+    opacity: 0; }
+
+  .project--info {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 100;
+    line-height: 1rem;
     padding: 1rem;
     position: absolute;
     width: 100%;
