@@ -27,7 +27,7 @@ export default [
       title: "Cowboys contact app",
       projectURL: "cowboys-contact-list.surge.sh",
       image: "cowboys.png",
-      info: "This student work is an exercise in passing data between JS documents using params and mapping over stored data."
+      info: "This student work is an exercise in passing data between JS files using params and mapping over stored data."
     },
     {
       title: "Facebook newsfeed",
